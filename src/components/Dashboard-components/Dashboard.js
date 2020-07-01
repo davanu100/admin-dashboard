@@ -22,6 +22,7 @@ import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import PendingProducts from "../PendingProducts/PendingProducts" ;
 
 function Copyright() {
   return (
@@ -173,6 +174,12 @@ export default function Dashboard() {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
+          { /* Pending Products */ }
+          <Grid item xs={12}>
+              <Paper className={classes.paper}>
+                <PendingProducts />
+              </Paper>
+            </Grid>
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
