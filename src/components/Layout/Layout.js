@@ -9,6 +9,7 @@ const layout = (props) => (
     <Aux>
         <Route path="/login" exact><LoginSide /></Route>
         <Route path="/dashboard"><Dashboard /></Route>
+        {/* <Route path="/pending-products"></Route> */}
     </Aux>
 );
 
