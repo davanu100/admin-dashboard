@@ -22,8 +22,9 @@ import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
-import { Route } from 'react-router';
-import Products from '../Products/Products';
+import PendingProducts from "../PendingProducts/PendingProducts" ;
+import { Route } from "react-router-dom" ;
+// import Products from '../Products/Products';
 
 function Copyright() {
   return (
@@ -193,14 +194,23 @@ export default function Dashboard() {
                   <Orders />
                 </Paper>
               </Grid>
-            </Grid>
+          <Grid container spacing={3}>
             <Box pt={4}>
               <Copyright />
             </Box>
+            </Grid>
+            </Grid>
           </Route>
 
           {/* pending-products */}
-          <Route path="/dashboard/pending-products" exact><Products/></Route>
+          <Route path="/dashboard/pending-products" exact>
+            <Grid item xs={12}>
+              <Paper className={classes.paper}>
+                <PendingProducts />
+              </Paper>
+            </Grid>
+          </Route>
+        
         </Container>
       </main>
     </div>
